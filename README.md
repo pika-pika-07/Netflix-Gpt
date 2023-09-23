@@ -13,6 +13,8 @@
 - Create SignUp user account
 - Implemnent Sign in
 - Created Redux store with userSlice
+- Implemened Signout
+- Update Profile
 
 # Features
 
