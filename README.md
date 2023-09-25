@@ -15,6 +15,8 @@
 - Created Redux store with userSlice
 - Implemened Signout
 - Update Profile
+- Register TMDB API
+- GET data from the api
 
 # Features
 
