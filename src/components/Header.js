@@ -57,18 +57,25 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
-      <img className="w-44" src={LOGO} alt="logo" />
+    // md for desktop
+    //  default for mobile
+    // sm for tabs
+    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between ">
+      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
       {user && (
-        <div className="flex p-2">
+        <div className="flex p-10 md:p-2 justify-between">
           <button
             className="py-2 px-4 m-2 bg-purple-800 text-white rounded-lg mx-4 my-2"
             onClick={handleGptSearchClick}
           >
             {!showGptSearch ? "GPT Search" : "Home"}
           </button>
-          <img className="w-12 h-12" alt="userIcon" src={user.photoURL} />
-          <button className="font-bold text-white" onClick={handleSignout}>
+          <img
+            className="hidden md:block w-12 h-12"
+            alt="userIcon"
+            src={user.photoURL}
+          />
+          <button className="font-bold text-white " onClick={handleSignout}>
             (Sign Out)
           </button>
         </div>
