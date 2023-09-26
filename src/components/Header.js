@@ -13,6 +13,7 @@ const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
   const handleSignout = () => {
     signOut(auth)
@@ -64,7 +65,7 @@ const Header = () => {
             className="py-2 px-4 m-2 bg-purple-800 text-white rounded-lg mx-4 my-2"
             onClick={handleGptSearchClick}
           >
-            GPT Search
+            {!showGptSearch ? "GPT Search" : "Home"}
           </button>
           <img className="w-12 h-12" alt="userIcon" src={user.photoURL} />
           <button className="font-bold text-white" onClick={handleSignout}>
