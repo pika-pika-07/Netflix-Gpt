@@ -55,7 +55,7 @@ const GptSearchBar = () => {
           type="text"
           ref={searchText}
           className=" p-4 m-4 col-span-9"
-          placeholder="watch something "
+          placeholder="Find something to watch"
         />
         <button
           className="py-2 px-4 bg-red-700 text-white rounded-lg col-span-3 m-4"
